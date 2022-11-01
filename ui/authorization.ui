@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Authorize_Form</class>
+ <widget class="QWidget" name="Authorize_Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>346</width>
-    <height>252</height>
+    <width>283</width>
+    <height>183</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Авторизация</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../auth_icon.png</normaloff>../auth_icon.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -42,13 +46,6 @@
     <widget class="QPushButton" name="loginButton">
      <property name="text">
       <string>Войти</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="registerButton">
-     <property name="text">
-      <string>Зарегистрироваться</string>
      </property>
     </widget>
    </item>
