@@ -83,6 +83,7 @@ class Control(QWidget, Ui_Control):
 
     """==================ФИЛЬТРАЦИЯ-КОНЕЦ========================"""
 
+    """=============НАСТРОЙКА НАЧАЛО============"""
     def config(self):
         if self.importance == 2:
             self.newWorkerBtn.setEnabled(False)
@@ -94,6 +95,9 @@ class Control(QWidget, Ui_Control):
             self.tabWidget.addTab(modules.positions.Positions(), 'Должности')
         else:
             self.setWorkerBtn.setEnabled(False)
+    """=============НАСТРОЙКА КОНЕЦ============"""
+
+    """=============УПРАВЛЕНИЕ СОТРУДНИКАМИ НАЧАЛО============"""
 
     def add_employee(self):
         dlg = modules.addDialog.AddDialog(self.outputWorkers.selectedItems(), self.outputWorkers, self.account)
@@ -142,6 +146,8 @@ class Control(QWidget, Ui_Control):
             cur.close()
             self.con.commit()
             self.fill_work_table()
+
+    """=============УПРАВЛЕНИЕ СОТРУДНИКАМИ КОНЕЦ============"""
 
 
 def exception_hook(cls, exception, traceback):

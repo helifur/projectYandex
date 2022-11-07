@@ -59,7 +59,7 @@ class Positions(QWidget, Ui_Positions_Tab):
         except IndexError:
             return
 
-        valid = QMessageBox.question(self, 'Удалить должность', f"Действительно удалить элемент с id {str(idd)}?",
+        valid = QMessageBox.question(self, 'Удалить должность', f"Действительно удалить должность с id {str(idd)}?",
                                      QMessageBox.Yes, QMessageBox.No)
 
         if valid == QMessageBox.Yes:
