@@ -78,6 +78,7 @@ class Ui_Change_Dialog(object):
         self.logEdit.setObjectName("logEdit")
         self.verticalLayout_2.addWidget(self.logEdit)
         self.passEdit = QtWidgets.QLineEdit(Change_Dialog)
+        self.passEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         self.passEdit.setObjectName("passEdit")
         self.verticalLayout_2.addWidget(self.passEdit)
         self.horizontalLayout.addLayout(self.verticalLayout_2)

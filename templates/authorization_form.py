@@ -32,6 +32,7 @@ class Ui_Authorize_Form(object):
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2, 0, QtCore.Qt.AlignHCenter)
         self.passwordEdit = QtWidgets.QLineEdit(Authorize_Form)
+        self.passwordEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         self.passwordEdit.setObjectName("passwordEdit")
         self.verticalLayout.addWidget(self.passwordEdit)
         self.verticalLayout_2.addLayout(self.verticalLayout)

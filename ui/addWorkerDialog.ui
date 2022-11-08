@@ -147,7 +147,11 @@
       <widget class="QLineEdit" name="logEdit"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="passEdit"/>
+      <widget class="QLineEdit" name="passEdit">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
