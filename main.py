@@ -92,7 +92,7 @@ class Control(QWidget, Ui_Control):
         elif self.importance == max(self.importances):
             import modules.positions
 
-            self.tabWidget.addTab(modules.positions.Positions(), 'Должности')
+            self.tabs.addTab(modules.positions.Positions(), 'Должности')
         else:
             self.setWorkerBtn.setEnabled(False)
     """=============НАСТРОЙКА КОНЕЦ============"""
@@ -122,8 +122,6 @@ class Control(QWidget, Ui_Control):
         login = cur.execute(f"SELECT login FROM workers WHERE id = {idd}").fetchone()[0]
         cur.close()
 
-        print(login)
-        print(self.account.get_login())
         if login == self.account.get_login():
             QMessageBox.about(self, 'Ошибка', 'Вы не можете удалить самого себя!')
             return

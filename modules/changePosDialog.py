@@ -12,22 +12,22 @@ class ChangePosition(QDialog):
 
         self.con = sqlite3.connect('management.db')
 
-        self.first = QLineEdit(self)
-        self.second = QSpinBox(self)
-        self.second.setMaximum(999999999)
-        self.third = QSpinBox(self)
-        self.third.setMinimum(1)
+        self.name = QLineEdit(self)
+        self.salary = QSpinBox(self)
+        self.salary.setMaximum(999999999)
+        self.ierarhy = QSpinBox(self)
+        self.ierarhy.setMinimum(1)
 
         cur1 = self.con.cursor()
-        self.third.setMaximum(max(i[0] for i in cur1.execute("SELECT importance FROM positions").fetchall()) + 1)
+        self.ierarhy.setMaximum(max(i[0] for i in cur1.execute("SELECT importance FROM positions").fetchall()) + 1)
         cur1.close()
 
         self.button = QPushButton('Изменить', self)
 
         layout = QFormLayout(self)
-        layout.addRow("Должность", self.first)
-        layout.addRow("Зарплата", self.second)
-        layout.addRow("Иерархия", self.third)
+        layout.addRow("Должность", self.name)
+        layout.addRow("Зарплата", self.salary)
+        layout.addRow("Иерархия", self.ierarhy)
         layout.addWidget(self.button)
 
         self.setWindowTitle('Изменить должность')
@@ -46,12 +46,12 @@ class ChangePosition(QDialog):
         result = cur.execute(f"SELECT * FROM positions WHERE id = {self.idd}").fetchone()
         cur.close()
 
-        self.first.setText(result[1])
-        self.second.setValue(int(result[2]))
-        self.third.setValue(int(result[3]))
+        self.name.setText(result[1])
+        self.salary.setValue(int(result[2]))
+        self.ierarhy.setValue(int(result[3]))
 
     def check(self):
-        if not self.first.text():
+        if not self.name.text():
             QMessageBox.about(self, "Ошибка", "Неверно заполнена форма!")
             return
 
@@ -60,7 +60,7 @@ class ChangePosition(QDialog):
     def update_elem(self):
         cur = self.con.cursor()
 
-        new_data = [self.first.text(), self.second.text(), self.third.text(), self.idd]
+        new_data = [self.name.text(), self.salary.text(), self.ierarhy.text(), self.idd]
 
         try:
             cur.execute("UPDATE positions SET position = '{}', salary = '{}', importance = '{}' "

@@ -20,8 +20,8 @@ class Ui_Control(object):
         Control.setWindowIcon(icon)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(Control)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.tabWidget = QtWidgets.QTabWidget(Control)
-        self.tabWidget.setObjectName("tabWidget")
+        self.tabs = QtWidgets.QTabWidget(Control)
+        self.tabs.setObjectName("tabs")
         self.workersTab = QtWidgets.QWidget()
         self.workersTab.setObjectName("workersTab")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.workersTab)
@@ -54,11 +54,11 @@ class Ui_Control(object):
         self.outputWorkers.setColumnCount(0)
         self.outputWorkers.setRowCount(0)
         self.verticalLayout.addWidget(self.outputWorkers)
-        self.tabWidget.addTab(self.workersTab, "")
-        self.verticalLayout_3.addWidget(self.tabWidget)
+        self.tabs.addTab(self.workersTab, "")
+        self.verticalLayout_3.addWidget(self.tabs)
 
         self.retranslateUi(Control)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabs.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Control)
 
     def retranslateUi(self, Control):
@@ -68,4 +68,4 @@ class Ui_Control(object):
         self.setWorkerBtn.setText(_translate("Control", "Изменить данные сотрудника"))
         self.deleteWorkerBtn.setText(_translate("Control", "Удалить данные сотрудника"))
         self.filterEdit.setPlaceholderText(_translate("Control", "Поиск по параметру"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.workersTab), _translate("Control", "Сотрудники"))
+        self.tabs.setTabText(self.tabs.indexOf(self.workersTab), _translate("Control", "Сотрудники"))

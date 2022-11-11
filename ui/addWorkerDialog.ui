@@ -20,70 +20,70 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="name_label">
        <property name="text">
         <string>Имя</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="surname_label">
        <property name="text">
         <string>Фамилия</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="sex_label">
        <property name="text">
         <string>Пол</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="fam_label">
        <property name="text">
         <string>Семейное положение</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="edu_label">
        <property name="text">
         <string>Образование</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="pos_label">
        <property name="text">
         <string>Должность</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="bd_label">
        <property name="text">
         <string>Дата рождения</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_10">
+      <widget class="QLabel" name="salary_label">
        <property name="text">
         <string>Зарплата</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="login_label">
        <property name="text">
         <string>Логин</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_8">
+      <widget class="QLabel" name="password_label">
        <property name="text">
         <string>Пароль</string>
        </property>
